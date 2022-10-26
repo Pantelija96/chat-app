@@ -6,14 +6,29 @@
 
 <body>
     Chat app
-    <button id="increment">+1</button>
 
-    <form id="sendMessage">
-        <input type="text" id="message" placeholder="Message">
-        <input type="submit" value="Send">
+    <form id="message-form">
+        <input type="text" id="message" name="message" placeholder="Message">
+        <button id="submitBtn">Send</button>
     </form>
 
     <button id="send-location">Send location test</button>
+    <br />
+    <h3>Messages</h3>
+    <div id="messages">
+
+    </div>
+    <br />
+    <input type="text" id="roomName" placeholder="Room name" />
+    <input type="text" id="username" placeholder="Username" />
+    <button id="join-room">Join room</button>
+
+    <br />
+
+    <h2>Users in room: <span id="roomNameData"></span></h2>
+    <div id="usersInRoom">
+
+    </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="./js/chat.js"></script>
 </body>
